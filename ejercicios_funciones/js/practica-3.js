@@ -32,7 +32,7 @@ array.forEach((value) => {
 document.body.appendChild(elementListOriginal);
 
 const titleWithFilter = document.createElement("h2");
-titleWithFilter.textContent = "Array original";
+titleWithFilter.textContent = "Array con el filter";
 document.body.appendChild(titleWithFilter);
 
 
