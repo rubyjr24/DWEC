@@ -1,0 +1,14 @@
+form{
+    position: relative;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label{
+    color: red;
+    visibility: hidden;
+}
