@@ -2,6 +2,8 @@
 
 class Logger{
 
+    #nodeElements = [];
+
     constructor(id){
         this.asignId(id);
     }
@@ -36,8 +38,18 @@ class Logger{
 
     }
 
+    clear(){
+
+        for (const element of this.#nodeElements) {
+            element.remove();
+        }
+
+        this.#nodeElements = [];
+    }
+
     appendChild(node){
         this.loggerHtmlElement.appendChild(node);
+        this.#nodeElements.push(node);
     }
 
     appendLine(contentString){
@@ -46,7 +58,7 @@ class Logger{
 
         if (this.stylesApplied) this.stylize(div);
 
-        this.loggerHtmlElement.appendChild(div);
+        this.appendChild(div);
     }
 
     applyStyles(){
@@ -81,7 +93,7 @@ class Logger{
         pre.textContent = JSON.stringify(object, null, 2);
         div.appendChild(pre);
 
-        this.loggerHtmlElement.appendChild(div);
+        this.appendChild(div);
         
     }
 

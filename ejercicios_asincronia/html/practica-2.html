@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../utils/js/logger.js"></script>
+</head>
+<body>
+
+    <form id="form-create-person" style="padding: 20px 5px;">
+        <h2>Añadir persona</h2>
+        <input type="text" name="person-name" id="person-name" placeholder="Nombre">
+        <input type="tel" name="person-phone" id="person-phone" placeholder="Teléfono">
+        <input type="number" name="person-age" id="person-age" placeholder="Edad">
+        <input type="submit" value="Añadir persona">
+    </form>
+
+    <form id="form-delete-person" style="padding: 20px 5px;">
+        <h2>Eliminar persona</h2>
+        <input type="tel" name="person-phone" id="person-phone-remove" placeholder="Teléfono">
+        <input type="submit" value="Eliminar persona">
+    </form>
+
+    <div id="logger-result" style="width: 100%; height: 200px; overflow-y: auto;"></div>
+
+    <script src="../js/practica-2.js"></script>
+</body>
+</html>
